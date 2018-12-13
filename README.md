@@ -118,7 +118,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
 - set background to an image with url() background function
 - transform property with scale() function scles an element eg scale(2) will double the size
 - The transform property has a variety of functions that lets you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as :hover that specify a certain state of an element, the transform property can easily add interactivity to your elements.
-- transform with skewX() to skew an elements
+- transform with skewX()/skewY() to skew an elements
 
 
 
