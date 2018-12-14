@@ -1,4 +1,3 @@
-
 # HTML [cleanup in progress]
 
 ?src & href - two important attributes
@@ -144,3 +143,37 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - align-self is to align flex items individually; once set, will override the align-items property; looks like it takes the same values as align-items
 
 # CSS Grid helps you easily build complex web designs. It works by turning an HTML element into a grid container with rows and columns for you to place children elements where you want within the grid.
+
+  - Turn any HTML element into a grid container by setting its display property to grid
+  - For grid containers:
+    - for columns use grid-template-columns property, for rows grid-template-rows. The number of parameters given to the property indicates the number of columns/rows in the grid, and the value of each parameter indicates the width of each column/height of each row
+      - for the value, there are many options:
+        - px
+        - fr: sets the column or row to a fraction of the available space
+        - auto: sets the column or row to the width or height of its content automatically
+        - %: adjusts the column or row to the percent width of its container
+        - e.g. grid-template-columns: auto 50px 10% 2fr 1fr; - creates 5 columns, first is as wide as its content, second 50px, third 10% of its container, and for the last two; the remaining space is divided into three sections, two are allocated for the fourth column, and one for the fifth
+    - To add gap between columns/rows use: grid-gap
+      - if it has one value it will add it to both rows and columns
+      - if it has two, first one will be for rows and the second for columns
+
+  - For grid items:
+    - To control the amount of columns/rows an item will consume, you can use the grid-column/grid-row properties in conjunction with the line numbers you want the item to start and stop at
+      - e.g. grid-column: 1 / 3
+    - In CSS Grid, the content of each item is located in a box which is referred to as a cell.
+    - To align the content's position within its cell horizontally use the justify-self; to align the content vertically use align-self; both accept: stretch, start, center, end
+      - we can also align all items with justify-items and align-items (these properties will need to exist in the container)
+    - We can group cells into an area and give it a custom name
+      - The code below merges the top three cells together into an area named header, the bottom three cells into a footer area, and it makes two areas in the middle row; advert and content. Note: Every word in the code represents a cell and every pair of quotation marks represent a row.
+      - e.g. grid-template-areas:
+              "header header header"
+              "advert content content"
+              "footer footer footer";
+      - for empty cells, use (.) instead of custom label
+
+
+# QUESTIONS:
+
+Q: if I have one div and I give it a class, can I refer that class twice to css and make two shapes? I think I saw it…
+Q: flex shrink seems to shrink stuff even when container is large..?
+Q: Auto and what size it gives to things; grid-template-columns: auto 50px 10% 2fr 1fr; why does the first item become as wide as it's content? is that what auto does? what about margin?
