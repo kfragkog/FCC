@@ -119,34 +119,60 @@ when labels are used, the input tag goes in the label, and after the text we wan
 - transform property with scale() function scles an element eg scale(2) will double the size
 - The transform property has a variety of functions that lets you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as :hover that specify a certain state of an element, the transform property can easily add interactivity to your elements.
 - transform with skewX()/skewY() to skew an elements
+- ::before/after elements are used to add something before or after a specific element
+- The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation
+  - animation-name, animation-duration ... [TBC]
+
+  - Responsive Web Design is an approach to designing web content that responds to the constraints of different devices
+    - Media Query: a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site - consists of a media-type and if it matches they type of device, the styles are applied e.g. @media (max-width: 100px) { /* CSS Rules} for all devices with width up to 100px
+    - Make an img responsive: img {max-width: 100%; display: block; height: auto;} - The max-width property of 100% scales the image to fit the width of its container, but the image won't stretch wider than its original width. Setting the display property to block changes the image from an inline element (its default), to a block element on its own line. The height property of auto keeps the original aspect ratio of the image.
+    - Make an image look retina/optimise it for retina displays - set the width & height to half of the original size
+    - Viewport units - Instead of using emor pxto size text, you can use viewport units for responsive typography. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.
+
+	   -  The four different viewport units are:
+
+    vw: 10vwwould be 10% of the viewport's width.
+    vh: 3vhwould be 3% of the viewport's height.
+    vmin: 70vminwould be 70% of the viewport's smaller dimension (height vs. width).
+    vmax: 100vmaxwould be 100% of the viewport's bigger dimension (height vs. width).
 
 
+- CSS Flexbox - create layouts for a dynamic UI
+	- Container properties:
+  	- Placing the CSS property display: flex;on an element allows you to use other flex properties to build a responsive page.
 
+  	- Adding display: flexto an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the flex-directionproperty to the parent item and setting it to row or column or row-reverse/column-reverse (reverses the order of the elements are displayed). Creating a row will align the children horizontally, and creating a column will align the children vertically.
 
+  	-  There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is justify-content: center;, which aligns all the flex items to the center inside the flex container. Others options include:
 
+      flex-start: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container.
+      flex-end: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.
+      space-between: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the other items between them are spaced evenly.
+      space-around: similar to space-betweenbut the first and last items are not locked to the edges of the container, the space is distributed around all the items
 
+  - align-itemsproperty to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.
+  The different values available for align-itemsinclude:
 
-# Bootstrap (3)
-- It's a single file of css and single file of js to easily create responsive web sites - main features are nav bar, grid system and overall responsiveness
-- to override bootstrap, we can apply our own css to its classes/attributes etc eg btn-dan
+      flex-start: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.
+      flex-end: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.
+      center: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).
+      stretch: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.
+      baseline: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.
 
+  - flex-wrapproperty, it tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.
 
+    CSS also has options for the direction of the wrap:
+      nowrap: this is the default setting, and does not wrap items.
+      wrap: wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.
+      wrap-reverse: wraps items from bottom-to-top if they are in a row, or right-to-left if they are in a column.
 
+	- Flex elements properties:
 
+    - The first is the flex-shrinkproperty. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
 
+    The flex-shrinkproperty takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a flex-shrinkvalue of 1 and the other has a flex-shrinkvalue of 3, the one with the value of 3 will shrink three times as much as the other.
 
+    - opposite is flex-grow
 
-
-
-
-
-
-
-
-
-
-
-
-
- - Introduction to JavaScript 9 - Javascript Basics: Control Flow 10 - Javascript Basics: Functions 11 - Javascript Basics: Arrays 12 - Javascript Basics: Objects 13 - DOM Manipulation 14 - Advanced DOM Manipulation 15 - Color Game Project 16 - Intro to jQuery 17 - Advanced jQuery 18 - Todo List Projects 19 - OPTIONAL Project: Patatap Clone 20 - Backend Basics 21 - The Command Line 22 - Node JS 23 - Server Side Frameworks 24 - Intermediate Express 25 - Working With API's 26 - YelpCamp: Basics 27 - Databases 28 - YelpCamp: Data Persistence 29 - RESTful Routing 30 - Data Associations 31 - YelpCamp: Comments 32 - Authentication 33 - YelpCamp: Adding Authentication 34 - YelpCamp: Cleaning Up 35 - YelpCamp: Update and Destroy 36 - YelpCamp: UI Improvements
-37 - Git and Github 38 - Deploying 39 - JavaScript: The Tricky Stuff
+    - The flex-basisproperty specifies the initial size of the item before CSS makes adjustments with flex-shrinkor flex-grow.
+      The units used by the flex-basisproperty are the same as other size properties (px, em, %, etc.). The value autosizes items based on the content.
