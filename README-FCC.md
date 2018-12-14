@@ -1,35 +1,12 @@
 
+# HTML [cleanup in progress]
 
-# Introduction to HTML
-HyperText Mark up Language - it allowed to create hyper links (1990)
-We tag the content: <tagName> some content </tagName>
-MDN - resource for HTML, CSS, JS
-Every HTML doc will start with this boilerplate - html + tab:
-<!DOCTYPE html> - to define that page uses HTML5
-<html> - it’s html and we then need one head and one body
-<head> - metadata, everything not displayed in the browser
-	<title></title>
-</head>
-<body>
-
-</body>
-</html>
-To add comment: <!-- text --> - cmd + /
-Title is important for linking to page or googling it etc
-h tag is a block element (gets its own line), not inline element like strong
-Ordered list has numbers, unordered has bullet points
-div - way of grouping things together (like a generic container) - block level element
-span - generic container, but inline
-
-attributes - add additional info to html elements - key value pair (link html attributes in MDN) - <tag attributename = "value"></tag>
-
-src & href - two important attributes
+?src & href - two important attributes
 
 a (anchor) tag is how we create links to other webpages or internal ones - href is the url and between > and </a> we put the text for the link - for internal link use # and the id of the element we want to link to
 
 relative path - add a link to a page that is relative to the one I am at (e.g page 2.html)
 
-# Intermediate HTML
 Tables - tr table row element, td element/cell inside row, th for heading in a tr OR thead and tbody
 
 Forms
@@ -50,18 +27,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
 - textarea is like text, but for multiple lines - it's a tag
 - to group things we can put them in p or div (for blocks)
 
-# Introduction to CSS6
-- Stands for Cascading Style Sheets
-- Seperate documents that we then include in our html file
-- the General CSS rule:
-  <!-- selector is where we reference existing html elements -->
-  selector {
-    <!-- and then we apply some style to it -->  
-    property: value;
-    anotherProperty: value;
-  }
-- we want our html and css (structure & style) to be separate
-- we connect the css file with a link element and the href attribute (type needs to be there as well, text/css)
+# CSS [cleanup in progress]
 - Colours: Hexadecimal eg black #000000 first 2 correspond to how much red, next how much green, next how much blue OR RGB, ranges from 0-255 rgb(0, 255, 0) OR RGBA with transparency (0.0-1.0)
 - background can be color or image (url())
 - for boarder we need color, width, style
