@@ -1,3 +1,5 @@
+make all code *codeIneedtoSeeEasily*
+
 # HTML [cleanup in progress]
 
 ?src & href - two important attributes
@@ -153,7 +155,14 @@ when labels are used, the input tag goes in the label, and after the text we wan
         - auto: sets the column or row to the width or height of its content automatically
         - %: adjusts the column or row to the percent width of its container
         - e.g. grid-template-columns: auto 50px 10% 2fr 1fr; - creates 5 columns, first is as wide as its content, second 50px, third 10% of its container, and for the last two; the remaining space is divided into three sections, two are allocated for the fourth column, and one for the fifth
-    - To add gap between columns/rows use: grid-gap
+    - to create a grid with rows/columns of the same height/width use: repeat(no of rows, size) instead of individual sizes for the grid-template properties
+      - You can also repeat multiple values with the repeat function!!
+        - e.g. grid-template-columns: repeat(2, 1fr 50px) 20px; which will translates to rid-template-columns: 1fr 50px 1fr 50px 20px;
+        - repeat function comes with option *auto-fill*, to be used instead of the number of repetitions
+        - *auto-fit* is almost identical, the only difference is that when the container's size exceeds the size of all the items combined, auto-fill keeps inserting empty rows or columns and pushes your items to the side, while auto-fit collapses those empty rows or columns and stretches your items to fit the size of the container
+    - to control the min & max size the items can have in a column/row use *minmax* for each item or in repeat:
+      - e.g. minmax(50px, 200px)
+    - To add gap between columns/rows use: *grid-gap*
       - if it has one value it will add it to both rows and columns
       - if it has two, first one will be for rows and the second for columns
 
@@ -163,17 +172,23 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - In CSS Grid, the content of each item is located in a box which is referred to as a cell.
     - To align the content's position within its cell horizontally use the justify-self; to align the content vertically use align-self; both accept: stretch, start, center, end
       - we can also align all items with justify-items and align-items (these properties will need to exist in the container)
-    - We can group cells into an area and give it a custom name
+    - We can group cells into an area and give it a custom name with *grid-template-areas*
       - The code below merges the top three cells together into an area named header, the bottom three cells into a footer area, and it makes two areas in the middle row; advert and content. Note: Every word in the code represents a cell and every pair of quotation marks represent a row.
       - e.g. grid-template-areas:
               "header header header"
               "advert content content"
               "footer footer footer";
       - for empty cells, use (.) instead of custom label
+    - To place an item in an area use *grid-area* e.g. grid-area: header;
+      - grid-area can be used without a grid existing in the first place as per below
+        - grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
+        - e.g. grid-area: 1/1/2/4; will consume the rows between lines 1 and 2, and the columns between lines 1 and 4  
+    - Grid within a grid - we can create a grid within a grid item
+
+
 
 
 # QUESTIONS:
 
-Q: if I have one div and I give it a class, can I refer that class twice to css and make two shapes? I think I saw it…
 Q: flex shrink seems to shrink stuff even when container is large..?
 Q: Auto and what size it gives to things; grid-template-columns: auto 50px 10% 2fr 1fr; why does the first item become as wide as it's content? is that what auto does? what about margin?
