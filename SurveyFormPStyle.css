@@ -12,17 +12,94 @@ h1{
   font-weight: 500;
 }
 
-h2{
+p{
   font-weight: 400;
   padding-top: 35px;
   padding-bottom: 10px;
   font-size: 1.1em;
 }
 
+button{
+  font-family: montserrat;
+  background-color: #59ace0;
+  border: 1px solid;
+  color: white;
+  border-radius: 4px;
+  height: 40px;
+  width: 70px;
+}
+
 form{
   background-color: white;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   border-radius: 4px;
-  /* max-width: 900px; */s
+  min-width: 600px;
+  /* max-width: 900px; */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.left{
+  flex-basis: 200px;
+  text-align: right;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  /* this doesnt seem to work for the first three.. ASK LAURA */
+  align-items: center;
+}
+
+.right{
+  flex-basis: 300px;
+  margin-bottom: 40px;
+  height: 40px;
+  align-items: center;
+}
+
+#Buttons{
+  text-align: left;
+}
+
+#Buttons2{
+  text-align: left;
+  height: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  form{
+    min-width: 100px;
+  }
+  .row{
+    flex-direction: column;
+  }
+
+  .left{
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    /* this doesnt seem to work for the first three.. ASK LAURA */
+    align-items: center;
+  }
+
+  .right{
+    flex-basis: 70%;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 40px;
+    align-items: center;
+  }
+
+  #Buttons{
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
 }

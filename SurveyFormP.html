@@ -12,24 +12,25 @@
 <h1 id="title">Survey Form</h1>
 
 <form id="survey-form" action="">
-  <h2>Let us know how we can improve freeCodeCamp</h2>
 
-  <div>
-  <label for="name">Name:</label>
-  <input type="text" id="name" placeholder="Enter your name">
+  <p id="description">Let us know how we can improve freeCodeCamp</p>
+
+  <div class="row">
+    <label class="left" for="name">* Name:</label>
+    <input class="right" type="text" id="name" placeholder="Enter your name" required>
   </div>
-  <div>
-  <label for="email">Email:</label>
-  <input type="email" id="email" placeholder="Enter your Email">
+  <div class="row">
+    <label class="left" for="email">* Email:</label>
+    <input class="right" type="email" id="email" placeholder="Enter your Email" required>
   </div>
-  <div>
-  <label for="age">Age:</label>
-  <input type="integer" id="age" placeholder="Age">
+  <div class="row">
+    <label class="left" for="age">* Age:</label>
+    <input class="right" type="number" min="18" max="100" id="age" placeholder="Age" required>
   </div>
 
-  <div>
-  <label for="dropdown">Which option best describes your current role?</label>
-  <select name="" id="dropdown">
+  <div class="row">
+  <label class="left" for="dropdown">Which option best describes your current role?</label>
+  <select class="right" name="" id="dropdown">
     <option value="student">Student</option>
     <option value="FullTime">Full Time</option>
     <option value="Parttime">Part Time</option>
@@ -38,31 +39,71 @@
   </select>
   </div>
 
-  <div>
-  <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+  <div class="row">
+  <label class="left">* How likely is that you would recommend freeCodeCamp to a friend?</label>
 
-  <div>
-
-    <div>
-      <input type="radio" id="radio1" name="radio">
-      <label for="radio1">Definitely</label>
+    <div class="right" id="Buttons">
+      <div>
+        <input type="radio" id="radio1" name="radio" required>
+        <label for="radio1">Definitely</label>
+      </div>
+      <div>
+      <input type="radio" id="radio2" name="radio">
+      <label for="radio2">Maybe</label>
+      </div>
+      <div>
+      <input type="radio" id="radio3" name="radio">
+      <label for="radio3">Not sure</label>
+      </div>
     </div>
-    <div>
-    <input type="radio" id="radio2" name="radio">
-    <label for="radio2">Maybe</label>
-    </div>
-    <div>
-    <input type="radio" id="radio3" name="radio">
-    <label for="radio3">Not sure</label>
-    </div>
-
-    </div>
-
   </div>
 
+  <div class="row">
+  <label class="left" for="dropdown2">What do you like most in FCC:</label>
+  <select class="right" name="" id="dropdown2">
+    <option value="chal">Challenges</option>
+    <option value="proj">Projects</option>
+    <option value="com">Community</option>
+    <option value="opensc">Opensource</option>
+  </select>
+  </div>
 
+  <div class="row">
+  <label class="left">Things that should be improved in the future (Check all that apply):</label>
+    <div class="right" id="Buttons2">
+      <div>
+        <input type="checkbox" id="checkbox1" name="">
+        <label for="checkbox1">Front-End Projects</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox2" name="">
+        <label for="checkbox2">Back-End Projects</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox3" name="">
+        <label for="checkbox3">Data Vis</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox4" name="">
+        <label for="checkbox4">Gitter help rooms</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox5" name="">
+        <label for="checkbox5">City Meetups</label>
+      </div>
+      <div>
+        <input type="checkbox" id="checkbox6" name="">
+        <label for="checkbox6">Challenges</label>
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <label class="left" for="comments">Any Comments or Suggestions?</label>
+    <textarea class="right" name="name" rows="8" cols="80" placeholder="Enter your comment here.."></textarea>
+  </div>
 
+  <button type="submit" name="button">Submit</button>
 
 </form>
 

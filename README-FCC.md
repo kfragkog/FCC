@@ -101,18 +101,18 @@ when labels are used, the input tag goes in the label, and after the text we wan
 # CSS Flexbox - create layouts for a dynamic UI
 
 	- Container properties:
-  	- Placing the CSS property display: flex; on an element allows you to use other flex properties to build a responsive page.
+  	- Placing the CSS property *display: flex;* on an element allows you to use other flex properties to build a responsive page.
 
-  	- Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the flex-direction property to the parent item and setting it to row or column or row-reverse/column-reverse (reverses the order of the elements are displayed). Creating a row will align the children horizontally, and creating a column will align the children vertically.
+  	- Adding display: flex to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the *flex-direction* property to the parent item and setting it to row or column or row-reverse/column-reverse (reverses the order of the elements are displayed). Creating a row will align the children horizontally, and creating a column will align the children vertically.
 
-  	-  There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is justify-content: center;, which aligns all the flex items to the center inside the flex container. Others options include:
+  	-  There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is *justify-content*: center;, which aligns all the flex items to the center inside the flex container. Others options include:
 
       flex-start: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container.
       flex-end: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.
       space-between: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the other items between them are spaced evenly.
       space-around: similar to space-between but the first and last items are not locked to the edges of the container, the space is distributed around all the items
 
-  - align-items property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.
+  - *align-items* property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.
   The different values available for align-items include:
 
       flex-start: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.
@@ -121,7 +121,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
       stretch: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.
       baseline: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.
 
-  - flex-wrap property, it tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.
+  - *flex-wrap* property, it tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.
 
     CSS also has options for the direction of the wrap:
       nowrap: this is the default setting, and does not wrap items.
@@ -130,20 +130,20 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 	- Flex elements properties:
 
-    - The first is the flex-shrink property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
+    - The first is the *flex-shrink* property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
 
     The flex-shrink property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a flex-shrink value of 1 and the other has a flex-shrink value of 3, the one with the value of 3 will shrink three times as much as the other.
 
-    - opposite is flex-grow
+    - opposite is *flex-grow*
 
-    - The flex-basis property specifies the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow.
+    - The *flex-basis* property specifies the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow.
       The units used by the flex-basis property are the same as other size properties (px, em, %, etc.). The value auto sizes items based on the content.
 
     - to set all three together use flex property flex: 1 0 10px will apply grow 1 shrink 0 and set basis to 10px
 
-    - The order property is used to tell CSS the order of how flex items appear in the flex container.
+    - The *order* property is used to tell CSS the order of how flex items appear in the flex container.
 
-    - align-self is to align flex items individually; once set, will override the align-items property; looks like it takes the same values as align-items
+    - *align-self* is to align flex items individually; once set, will override the align-items property; looks like it takes the same values as align-items
 
 # CSS Grid helps you easily build complex web designs. It works by turning an HTML element into a grid container with rows and columns for you to place children elements where you want within the grid.
 
