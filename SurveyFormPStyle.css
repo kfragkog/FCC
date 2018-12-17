@@ -21,7 +21,8 @@ h2{
 
 form{
   background-color: white;
-  width: 50%;
-  margin: 20px auto;
+  width: 75%;
+  margin: 0 auto;
   border-radius: 4px;
+  /* max-width: 900px; */s
 }
