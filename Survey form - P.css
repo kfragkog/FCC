@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background: #a9d7d1;
+  text-align: center;
+  font-family: montserrat;
+}
+
+h1{
+  font-weight: 500;
+}
+
+h2{
+  font-weight: 400;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  font-size: 1.1em;
+}
+
+form{
+  background-color: white;
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 4px;
+}

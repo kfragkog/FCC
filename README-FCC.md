@@ -80,7 +80,8 @@ when labels are used, the input tag goes in the label, and after the text we wan
 - transform with skewX()/skewY() to skew an elements
 - ::before/after elements are used to add something before or after a specific element
 - The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation
-  - animation-name, animation-duration ... [TBC]
+
+- to fix the issues with formatting use * {box-sizing: border-box;} at the very top
 
 # Responsive Web Design is an approach to designing web content that responds to the constraints of different devices
 
