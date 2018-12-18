@@ -188,6 +188,82 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 
 
+# JavaScript
+
+  - JavaScript provides seven different data types which are undefined, null, boolean, string ("blah"), symbol, number (1), and object
+  - Declare a variable by putting *var* in front of it
+  - Assignment operator assigns values to vars
+    - e.g. myVariable = 5;
+  - NaN means not a number - we get it if we perform an operation on an undefined var
+  - To increment or add one to a variable use the *++* operator - to decrement use *--*
+  - Decimal numbers are sometimes referred to as floating point numbers or floats
+  - he remainder operator *%* gives the remainder of the division of two numbers - used to check if  number is even or odd by checking the remainder of the division of the number by 2
+    - different to modulus as the remainder doesnt work well with negative numbers
+  - there are operators that do both a math operation and assignment in one step like *+=* *-=* etc
+  -  you can escape a quote or any other chars that cant be typed out, by placing a backslash (\) in front of the quote - This signals to JavaScript that the following char should instead appear inside the string
+  - also "" and '' can be combined to avoid having to use the escape character
+  - concatenate strings by using *+* / *+=*
+  - *.length* to find the length of a string
+  - *[]* is a way to get a character at a specific index within a string
+  - String values are immutable, which means that they cannot be altered once created - that doesnt mean that the var cannot be changed, just that the individual characters cant
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # QUESTIONS:
 
