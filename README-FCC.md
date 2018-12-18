@@ -205,8 +205,26 @@ when labels are used, the input tag goes in the label, and after the text we wan
   - concatenate strings by using *+* / *+=*
   - *.length* to find the length of a string
   - *[]* is a way to get a character at a specific index within a string
-    - to get the last letter, we can use *.length - 1*
-  - String values are immutable, which means that they cannot be altered once created - that doesnt mean that the var cannot be changed, just that the individual characters cant
+    - to get the Nth-to-last character of a string use *.length - nth* e.g. to get the last letter, we can use .length - 1, 2nd to last .length - 2 etc
+    - String values are immutable, which means that they cannot be altered once created - that doesnt mean that the var cannot be changed, just that the individual characters cant
+  - With array variables, we can store several pieces of data in one place
+    - Declare an array by *var arrayName = [firstEntry, secondEntry, ..];*
+    - we can nest arrays in other arrays - called a Multi-dimensional Array
+  - Indexes used to access the date inside an array
+    - Unlike strings, the entries of arrays are mutable and can be changed freely
+  - An easy way to append data to the end of an array is via the push() function. *.push()* takes one or more parameters and "pushes" them onto the end of the array - for the beginning of the array use *.unshift()*
+  - To remove the last element from the array use *.pop()* / for the first use *.shift()* - it's used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable
+  - Functions are reusable parts of code
+    - Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments
+  - Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code. Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
+  - It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable
+  - To send a value back out of a function use *return* statement
+    - A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined
+    - e.g. var sum = 0;
+            function addSum(num) {
+                sum = sum + num;
+              }
+              var returnedValue = addSum(3); // sum will be modified but returned value is undefined
 
 
 
