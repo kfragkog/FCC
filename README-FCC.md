@@ -205,6 +205,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
   - concatenate strings by using *+* / *+=*
   - *.length* to find the length of a string
   - *[]* is a way to get a character at a specific index within a string
+    - to get the last letter, we can use *.length - 1*
   - String values are immutable, which means that they cannot be altered once created - that doesnt mean that the var cannot be changed, just that the individual characters cant
 
 
