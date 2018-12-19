@@ -190,7 +190,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 # JavaScript
 
-  - JavaScript provides seven different data types which are undefined, null, boolean, string ("blah"), symbol, number (1), and object
+  - JavaScript provides seven different data types which are undefined, null, boolean (true or false), string ("blah"), symbol, number (1), and object
   - Declare a variable by putting *var* in front of it
   - Assignment operator assigns values to vars
     - e.g. myVariable = 5;
@@ -225,8 +225,43 @@ when labels are used, the input tag goes in the label, and after the text we wan
                 sum = sum + num;
               }
               var returnedValue = addSum(3); // sum will be modified but returned value is undefined
-
-
+  - When a return statement is reached, the execution of the current function stops and control returns to the calling location
+    - we can stop a function from executing further by returning undefined if a certain condition is met
+  - a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue
+  - Comparison Operators - these operators return a boolean true or false value
+    - the most basic, the equality operator *==*
+      - to compare different types of data we need to convert one in the other (Type Coercion) which the eq operator attempts to do automatically
+    - Strict equality operator *===* similar to equality one, however it does not perform a type conversion
+    - *!=* not equal & strictly not equal *!==*
+    - *>*, *<*, *>=*, *<=* (all perform type coercion)
+    - logical and operator *&&*, logical or operator *||*
+    - *switch* statements
+      - switch is using === equality
+      - might not be able to specify all possible values - Instead, you can add the *default* statement which will be executed if no matching case statements are found
+      - if we have multiple inputs with the same output, the cases can be out one after the other and just one statement can be used
+      - if we have main options, prefer switch vs if/else if
+    - we dont need if statements to get true/false from a comparison! result of any comparison will return true/false as all comparison operators return boolean values
+      - e.g. return a === b; will return the result of the comparison as true or false
+  - Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties (like name, legs etc below)
+    - e.g. var cat = {
+            "name": "Whiskers",
+            "legs": 4,
+            "tails": 1,
+            "enemies": ["Water", "Dogs"]
+          };
+    - e.g. var anotherObject = {
+            make: "Ford",
+            5: "five",
+            "model": "focus"
+          };
+    - if your object has any non-string properties, JavaScript will automatically typecast them as strings
+    - There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array
+      - . for when we know the name of the property
+      - [] If the property of the object you are trying to access has a space in its name, you will need to use bracket notation - note that property names will need to have ""
+      - [] Another use of bracket notation on objects is to access a property which is stored as the value of a variable, by calling the variable in the []
+    - to update the value of a property use .propertyName or ["propertyName"] and assign a new value (same as with vars)
+    - to add a new property follow the same as above line
+    - to delete a property use *delete object.propName;*
 
 
 
