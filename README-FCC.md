@@ -262,7 +262,38 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - to update the value of a property use .propertyName or ["propertyName"] and assign a new value (same as with vars)
     - to add a new property follow the same as above line
     - to delete a property use *delete object.propName;*
-
+    - Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to "lookup" values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range
+      - e.g. I want to return a value when a certain value is being passed - for a set range of data (like a disctionary), just set the object and then update var result with the obj[val]
+    - to check if an object has a specific property use *.hasOwnProperty(propname)* method - it returns true or false
+    - Objects hold data in a property, which has a key-value format. In the example above, "artist": "Daft Punk" is a property that has a key of "artist" and a value of "Daft Punk"
+    - Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+      - e.g. var ourMusic = [
+              {
+                "artist": "Daft Punk",
+                "title": "Homework",
+                "release_year": 1997,
+                "formats": [
+                  "CD",
+                  "Cassette",
+                  "LP"
+                ],
+                "gold": true
+              }
+            ];
+    - Nested objects look like :
+      - e.g. var ourStorage = {
+              "desk": {
+                "drawer": "stapler"
+              },
+              "cabinet": {
+                "top drawer": {
+                  "folder1": "a file",
+                  "folder2": "secrets"
+                },
+                "bottom drawer": "soda"
+              }
+            };
+    - if nested array as well as nested obj, then to access the arrray use [] (as any array) and to access the obj prop use either . or []
 
 
 
