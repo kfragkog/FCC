@@ -294,6 +294,8 @@ when labels are used, the input tag goes in the label, and after the text we wan
               }
             };
     - if nested array as well as nested obj, then to access the arrray use [] (as any array) and to access the obj prop use either . or []
+    - to increment a number by more than 1, use *i += 2, 3 etc...*
+    - a *do...while* loop ensures that the code inside the loop will run at least once
 
 
 
