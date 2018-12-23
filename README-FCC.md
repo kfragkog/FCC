@@ -294,10 +294,17 @@ when labels are used, the input tag goes in the label, and after the text we wan
               }
             };
     - if nested array as well as nested obj, then to access the arrray use [] (as any array) and to access the obj prop use either . or []
-    - to increment a number by more than 1, use *i += 2, 3 etc...*
-    - a *do...while* loop ensures that the code inside the loop will run at least once
+  - to increment a number by more than 1, use *i += 2, 3 etc...*
+  - a *do...while* loop ensures that the code inside the loop will run at least once
+  - Random num generators
+    - to generate random fractions (decimal numbers) use *Math.random()* - it will generate a random number between 0 (inclusive) and 1 (exclusive)
+    - to generate whole nums, use both random and *Math.floor()*
+    - for num within a range use *Math.floor(math.random() * (max - min + 1)) + min*
+  - *parseInt()* used to parse a string and return an integer
+      - It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36
+  - conditional operator *condition ? statement-if-true : statement-if-false;* can be used instead of if else statement
 
-
+# Basic Data Structures
 
 
 
