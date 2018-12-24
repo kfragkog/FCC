@@ -320,10 +320,15 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - Another huge advantage of the spread operator, is the ability to combine arrays, or to insert all the elements of one array into another, at any index
     - e.g. let thatArray = ['basil', 'cilantro', *...thisArray*, 'coriander'];
   - *indexOf()* takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array
+  - to iterate through all the keys within an object use syntax *for...in*
+    - e.g. for (let user in users) {
+              console.log(user);
+            };
+    - In this statement, we defined a variable user, and this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console
+    - To generate an array from the object data use *Object.keys()* and pass the object as an argument
 
 
-
-
+# Basic Algorithm Scripting
 
 
 
@@ -378,3 +383,4 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 Q: flex shrink seems to shrink stuff even when container is large..?
 Q: Auto and what size it gives to things; grid-template-columns: auto 50px 10% 2fr 1fr; why does the first item become as wide as it's content? is that what auto does? what about margin?
+Q: let or var?
