@@ -211,7 +211,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - Declare an array by *var arrayName = [firstEntry, secondEntry, ..];*
     - we can nest arrays in other arrays - called a Multi-dimensional Array
   - Indexes used to access the date inside an array
-    - Unlike strings, the entries of arrays are mutable and can be changed freely
+    - Unlike strings, the entries of arrays are mutable and can be changed freely - to change data in array, we can assign new value to any index
   - An easy way to append data to the end of an array is via the push() function. *.push()* takes one or more parameters and "pushes" them onto the end of the array - for the beginning of the array use *.unshift()*
   - To remove the last element from the array use *.pop()* / for the first use *.shift()* - it's used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable
   - Functions are reusable parts of code
@@ -305,6 +305,21 @@ when labels are used, the input tag goes in the label, and after the text we wan
   - conditional operator *condition ? statement-if-true : statement-if-false;* can be used instead of if else statement
 
 # Basic Data Structures
+
+  - use *splice()* to remove any number of consecutive elements from anywhere in an array - takes 3 parameters; first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete, and third is the new item(s) to add
+      - e.g. function colorChange(arr, index, newColor) {
+              arr.splice(index, 1, newColor);
+              return arr;
+             }
+
+             let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf'];
+
+             colorScheme = colorChange(colorScheme, 2, '#332327');
+  - *slice()* extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index)
+  - spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ... e.g. let thatArray = *[...thisArray]*; used just as another array object
+    - Another huge advantage of the spread operator, is the ability to combine arrays, or to insert all the elements of one array into another, at any index
+    - e.g. let thatArray = ['basil', 'cilantro', *...thisArray*, 'coriander'];
+  - *indexOf()* takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array
 
 
 
