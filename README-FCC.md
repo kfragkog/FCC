@@ -205,7 +205,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
   - concatenate strings by using *+* / *+=*
   - *.length* to find the length of a string
   - *[]* is a way to get a character at a specific index within a string
-    - to get the Nth-to-last character of a string use *.length - nth* e.g. to get the last letter, we can use .length - 1, 2nd to last .length - 2 etc
+    - to get to the the Nth-to-last character of a string use *.length - nth* e.g. to get the last letter, we can use .length - 1, 2nd to last .length - 2 etc
     - String values are immutable, which means that they cannot be altered once created - that doesnt mean that the var cannot be changed, just that the individual characters cant
   - With array variables, we can store several pieces of data in one place
     - Declare an array by *var arrayName = [firstEntry, secondEntry, ..];*
@@ -330,6 +330,8 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 # Basic Algorithm Scripting
 
+  - The *join()* method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string
+    - separator: Specifies a string to separate each pair of adjacent elements of the array. The separator is converted to a string if necessary. If omitted, the array elements are separated with a comma (","). If separator is an empty string, all elements are joined without any characters in between them
 
 
 
