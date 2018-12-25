@@ -332,7 +332,8 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
   - The *join()* method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string
     - separator: Specifies a string to separate each pair of adjacent elements of the array. The separator is converted to a string if necessary. If omitted, the array elements are separated with a comma (","). If separator is an empty string, all elements are joined without any characters in between them
-
+  - The *split()* method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split
+    - separator: Specifies the string which denotes the points at which each split should occur
 
 
 

@@ -2,7 +2,7 @@ function reverseString(str) {
   let a = [];
   let revStr = "";
 
-  for (let i = 1; i <= str.length; i++){
+  for (let i = 1; i <= str.length; i++) {
     a.push(str[str.length - i]);
   }
 
@@ -12,4 +12,4 @@ function reverseString(str) {
 }
 
 //example
-reverseString("hello");
+reverseString("hello"); 
