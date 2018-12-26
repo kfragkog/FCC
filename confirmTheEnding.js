@@ -4,7 +4,7 @@ function confirmEnding(str, target) {
   
     let lengthT = target.length;
   
-    let slicedS = str.slice(str.length - lengthT,           str.length + 1);
+    let slicedS = str.slice(str.length - lengthT, str.length + 1);
     
     if (slicedS == target) {
       return true;
