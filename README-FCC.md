@@ -306,16 +306,9 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 # Basic Data Structures
 
-  - use *splice()* to remove any number of consecutive elements from anywhere in an array - takes 3 parameters; first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete, and third is the new item(s) to add
-      - e.g. function colorChange(arr, index, newColor) {
-              arr.splice(index, 1, newColor);
-              return arr;
-             }
-
-             let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf'];
-
-             colorScheme = colorChange(colorScheme, 2, '#332327');
-  - *slice()* extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index)
+  - *splice()* method changes the contents of an array by removing or replacing existing elements and/or adding new elements - takes 3 parameters; first parameter represents the index at which to start changing the array, while the second parameter indicates the number of elements to delete, and third is the new item(s) to add
+    - to just add something in the middle of an array use *splice(n, null, objects)*
+  - *slice()* extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index) - Can be used for strings too!
   - spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ... e.g. let thatArray = *[...thisArray]*; used just as another array object
     - Another huge advantage of the spread operator, is the ability to combine arrays, or to insert all the elements of one array into another, at any index
     - e.g. let thatArray = ['basil', 'cilantro', *...thisArray*, 'coriander'];
@@ -334,6 +327,9 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - separator: Specifies a string to separate each pair of adjacent elements of the array. The separator is converted to a string if necessary. If omitted, the array elements are separated with a comma (","). If separator is an empty string, all elements are joined without any characters in between them
   - The *split()* method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split
     - separator: Specifies the string which denotes the points at which each split should occur
+  - To break a for loop use *break;* e.g. Finders Keepers challenge
+  - *===* is called a strict comparison operator - In the case of "a === b" a and b must be the same value and also the same type for it to evaluate to true (== needs them to just be the same value)
+  - methods like slice(), substr() etc have optional parameters as well - remember that these do not need to be filled, so e.g. end of extraction can be left blank to get to the end of the string
 
 
 
