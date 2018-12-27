@@ -44,3 +44,11 @@ function getIndexToIns(arr, num) {
 
 getIndexToIns([5, 3, 20, 3, 8, 50, 1, 27], 5);
 
+// LAURAS SOLUTION for the 2nd step
+// numIndex = newArr.length;
+//     for (let k = 0; k < newArr.length; k++) {
+//       if (num <= newArr[k]) {
+//         numIndex = k;
+//         break;
+//       }
+//     }
