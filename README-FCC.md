@@ -332,10 +332,44 @@ when labels are used, the input tag goes in the label, and after the text we wan
   - methods like slice(), substr() etc have optional parameters as well - remember that these do not need to be filled, so e.g. end of extraction can be left blank to get to the end of the string
 
 
+# Object Oriented Programming
 
-
-
-
+  - Objects; Properties & Methods (properties that are functions); Values
+  - when Methods are called they need to have (), same as a function
+  - to access a property of an object in order to use it in a method we can do *objectName.propertyName*
+    - if it's the same object our method is in, we can use *this.propertyName*
+  - Constructors are functions that create new objects - the blueprints for the creation of new objects; they follow a few conventions:
+      - Constructors are defined with a capitalized name to distinguish them from other functions that are not constructors.
+      - Constructors use the keyword this to set properties of the object they will create. Inside the constructor, this refers to the new object it will create.
+      - Constructors define properties and behaviors instead of returning a value as other functions might.
+    - to create an object using a constractor function follow syntax 
+    *let newObjName = new Constructor()*
+    - we can design our constructors to accept parameters instead of fixing the values of the properties
+    - Anytime a constructor function creates a new object, that object is said to be an instance of its constructor - to verify this with the *instanceof* operator with *objName instanceof Constructor*
+      - another way is to use the *constructor* propery which is a reference to the constructor function that created the instance - but not great as it can be overwritten.. 
+    - to iterate through all the properties within an object use syntax *for...in*
+      - e.g. for (let property in object){ do smth}
+      - a different value is assigned to property in every iteration
+    - To avoid having the same variable duplicated in all instances of a constructor, we can use Constructor's prototype - The prototype is an object that is shared among ALL instances of Constructor
+      - to add a property to the prototype use *Constructor.prototype.propertyName = propertyValue*
+      - a more efficient way tho, is to set the prototype to a new object and set multiple properties at once
+        - e.g. Bird.prototype = {
+                  numLegs: 2, 
+                  eat: function() {
+                    console.log("nom nom nom");
+                  },
+                  describe: function() {
+                    console.log("My name is " + this.name);
+                  }
+                };
+        - when manually setting the prototype to a new object we NEED to define the *constructor property*
+      - all instances automatically have the properties on the prototype
+      - Nearly every object in JavaScript has a prototype property which is part of the constructor function that created it.
+    - Own properties are defined directly on the object instance itself. And prototype properties are defined on the prototype
+    - to check where a prototype is inherited from we can use *isPrototypeOf* method
+      - e.g. Bird.prototype.isPrototypeOf(duck);
+    - Prototype chain: cause prototype is an object, it has its own prototype.. the order is Object(supertype for all objects)->Constructor1->...->instance(subtype of constructor)
+  - Don't Repeat Yourself (DRY)
 
 
 
