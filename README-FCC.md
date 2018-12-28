@@ -369,8 +369,25 @@ when labels are used, the input tag goes in the label, and after the text we wan
     - to check where a prototype is inherited from we can use *isPrototypeOf* method
       - e.g. Bird.prototype.isPrototypeOf(duck);
     - Prototype chain: cause prototype is an object, it has its own prototype.. the order is Object(supertype for all objects)->Constructor1->...->instance(subtype of constructor)
-  - Don't Repeat Yourself (DRY)
+  - Don't Repeat Yourself (DRY) & Inheritance - for any properties that are repeating through either instances or constructors prototypes etc.. create a parent for that object so all children inherit those automatically
+    - for better inheritance use *let instanceName = Object.create(ParentObject.prototype)* to create an instance of a Constructor
+    - to set the prototype of the subtype (or child)—in this case, Bird—to be an instance of Animal/Constructor/Parent use *ChildObject.prototype = Object.create(ParentObject.prototype)*
+    - REMEMBER TO CHANGE when a child inherits its prototype from a parent, the constructor is pointing to the parent for all instances of the child - to change that, manually set the constructor prop to the child name
+      - e.g. Bird.prototype.constructor = Bird; otherwise it would be Animal
+    - A constructor function that inherits its prototype object from a supertype constructor function can still have its own methods in addition to inherited methods
+      - they can be added similar to the way any property/method would be added or changed (and same as the constructor property above)
+      - *ChildObject.prototype.methodName = function() {...};*
+    - Use a *Mixin* to Add Common Behavior Between Unrelated Objects
+      - e.g. let flyMixin = function(obj) {
+                obj.fly = function() {
+                  console.log("Flying, wooosh!");
+                }
+              };
 
+              And then assign the obj to the Mixin
+
+              flyMixin(bird);
+              flyMixin(plane);
 
 
 
