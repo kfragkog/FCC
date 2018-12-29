@@ -306,7 +306,7 @@ when labels are used, the input tag goes in the label, and after the text we wan
 
 # Basic Data Structures
 
-  - *splice()* method changes the contents of an array by removing or replacing existing elements and/or adding new elements - takes 3 parameters; first parameter represents the index at which to start changing the array, while the second parameter indicates the number of elements to delete, and third is the new item(s) to add
+  - *splice()* method changes the contents of an array by removing or replacing existing elements and/or adding new elements - takes 3 parameters; first parameter represents the index at which to start changing the array, while the second parameter indicates the number of elements to delete, and third is the new item(s) to add - for a string use *substring()*
     - to just add something in the middle of an array use *splice(n, null, objects)*
   - *slice()* extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index) - Can be used for strings too!
   - spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ... e.g. let thatArray = *[...thisArray]*; used just as another array object
